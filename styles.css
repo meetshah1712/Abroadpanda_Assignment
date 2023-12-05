@@ -1,0 +1,114 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333333; /* Dark font color */
+    background-color: #f7f7f7; /* Light background */
+}
+
+header {
+    background-color: #f7d31e; /* Yellow header background */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #333333; /* Dark navigation link color */
+    text-decoration: none;
+    font-weight: bold; /* Make the navigation text bold */
+    font-size: 18px; /* Adjust the font size */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+nav ul li a:hover {
+    color: #f7d31e; /* Hover color change */
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f7d31e; /* Yellow footer background */
+    color: #333333; /* Dark footer text color */
+}
+
+/* Content styles */
+h1, h2 {
+    color: #333333; /* Dark heading color */
+    text-align: center; /* Center align headings */
+}
+
+p {
+    color: #666666; /* Gray paragraph text color */
+    line-height: 1.8;
+}
+
+a {
+    color: #f7d31e; /* Yellow link color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+a:hover {
+    color: #333333; /* Hover color change */
+}
+
+/* Card view for images */
+.image-card {
+    border-radius: 8px; /* Rounded corners for cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    padding: 10px; /* Padding for space around images */
+    background-color: #ffffff; /* White background for cards */
+    transition: transform 0.3s ease; /* Smooth scale transition */
+}
+
+.image-card:hover {
+    transform: scale(1.05); /* Hover scale effect */
+    transition: transform 0.3s ease; /* Smooth scale transition on hover */
+    animation-name: cardHover;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes cardHover {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+/* 2x2 Grid layout for images */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px; /* Gap between grid items */
+    justify-items: center; /* Center align items */
+}
+
+/* Style the image container within the grid */
+.image-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for images */
+}
